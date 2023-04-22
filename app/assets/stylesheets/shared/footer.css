@@ -1,0 +1,13 @@
+footer {
+ width: 100vw;
+ height: 100px;
+ background-color: #3176D5;
+ display: flex;
+ justify-content: center;
+ align-items: end;
+}
+
+.footer-logo {
+  font-size: 20px;
+  color: #FFFFFF;
+}

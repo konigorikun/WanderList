@@ -1,0 +1,23 @@
+<header class="top-page-header">
+  <div class="heading">
+    <h1 class="logo"><a href="/">WanderList</a></h1>
+    <ul class="lists_right">
+      <% if user_signed_in? %>
+        <li><%= link_to current_user.nickname, '#', class: "user-nickname" %></li>
+        <li><%= link_to 'ログアウト', '#', method: :delete, class: "logout"%>
+     <% else %>
+        <li><%= link_to 'ログイン', '#', class: "login"%>
+        <li><%= link_to '新規登録', '#', class: "sign-up"%>
+     <% end %>
+    </ul>
+  </div>
+  <div class="nav">
+    <ul class="nav-lists">
+      <li><%= link_to '投稿', '#', class: "nav-lists_list", id: "posts"%></li>
+      <li><%= link_to 'スケジュール帳', '#', class: "nav-lists_list" %></li>
+      <li><%= link_to '地図', '#', class: "nav-lists_list" %></li>
+      <li><%= link_to 'お気に入り', '#', class: "nav-lists_list" %></li>
+      <li><%= link_to '友達リスト', '#', class: "nav-lists_list" %></li>
+    </ul>
+  </div>
+</header>
