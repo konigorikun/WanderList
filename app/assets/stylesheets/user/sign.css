@@ -4,6 +4,14 @@
   height: 100vh;
   display: flex;
 }
+
+.sign-logo {
+  margin-top: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: #3176D5;
+}
+
 /*** 画像 ***/
 .sign-img {
   width: calc(100% - 480px);
@@ -27,7 +35,7 @@
 
 .sign-up-title {
   width: 100%;
-  margin: 50px 0;
+  margin: 20px 0;
   padding: 30px;
   font-size: 25px;
   text-align: center;
@@ -71,12 +79,13 @@ form input[type="submit"]:hover {
   background: linear-gradient(#BEDAF0,#F2F8F9,#F7F5F3,#BEB89C);
   display: flex;
   flex-direction: column;
+  padding: 30px 0;
   overflow-y: scroll;
 }
 
 .sign-in-title {
   width: 100%;
-  margin: 50px 0;
+  margin: 20px 0;
   padding: 30px;
   font-size: 25px;
   text-align: center;
