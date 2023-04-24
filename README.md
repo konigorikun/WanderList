@@ -22,9 +22,10 @@
 
 | Column                    | Type       | Options                        |
 | ------------------------- | ---------- | ------------------------------ |
+| category_id               | integer    | null: false                    |
 | place                     | string     | null: false                    |
 | content                   | text       |                                |
-| public                    | string     | null: false                    |
+| public_id                 | integer    | null: false                    |
 | user                      | references | null: false, foreign_key: true |
 
 ### Association
