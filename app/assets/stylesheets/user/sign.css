@@ -105,3 +105,8 @@ form input[type="submit"]:hover {
   margin-right: 10px; 
 }
 
+.login-flash-message {
+  text-align: center;
+  color: red;
+}
+
