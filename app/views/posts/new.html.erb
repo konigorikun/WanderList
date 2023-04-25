@@ -1,4 +1,4 @@
-<div class="post-new">
+<body class="post-new">
   <div class="new-wrap">
     <div class="post-content">
       <%= form_with model: @post, class: "post-form", local: true do |f| %>
@@ -9,6 +9,9 @@
               <div class="post-title">好きなものを投稿しよう</div>
             </div> 
           </section>
+          
+           <%= render 'shared/error_messages', model: f.object %>
+
           <section class="form-section">
             <div class="form-section-wrap">
               <div class="item-name">
@@ -62,4 +65,4 @@
       <% end %>
     </div>
   </div>
-</div>
+</body>

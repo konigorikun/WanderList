@@ -1,5 +1,7 @@
+html {
+ height: 100%;
+}
 .post-new{
-  height: 1500px;
   font-size: 16px;
   color: #383838;
   font-family: Roboto,游ゴシック体,YuGothic,游ゴシック Medium,Yu Gothic Medium,ヒラギノ角ゴ Pro W3,Hiragino Kaku Gothic Pro,Verdana,メイリオ,Meiryo,Osaka,ＭＳ Ｐゴシック,MS PGothic,Font Awesome\\5 Free,Font Awesome\\5 Brands,sans-serif;
