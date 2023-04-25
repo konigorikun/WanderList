@@ -110,3 +110,7 @@ form input[type="submit"]:hover {        /* Post.newも共有 */
   color: red;
 }
 
+.error-sign{
+  margin: 0 50px 20px;
+  color: red;
+}
