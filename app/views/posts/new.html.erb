@@ -1,0 +1,65 @@
+<div class="post-new">
+  <div class="new-wrap">
+    <div class="post-content">
+      <%= form_with model: @post, class: "post-form", local: true do |f| %>
+        <div class="box-wrap">
+          <section class="form-section">
+            <div class="section-header"></div>
+            <div class="form-section-wrap">
+              <div class="post-title">好きなものを投稿しよう</div>
+            </div> 
+          </section>
+          <section class="form-section">
+            <div class="form-section-wrap">
+              <div class="item-name">
+                好きな画像・動画
+                <span class="not_required">任意</span>
+              </div>
+              <%= f.file_field :image, class:"posts-text",id:"item-image" %>
+            </div>
+          </section>
+          <section class="form-section">
+            <div class="form-section-wrap">
+              <div class="item-name">
+                場所名
+                <span class="required">必須</span>
+              </div>
+              <%= f.text_area :place, class:"posts-place", id:"post-place", placeholder:"場所名（必須 40文字まで)", maxlength:"40" %>
+            </div>
+          </section>
+          <section class="form-section">
+            <div class="form-section-wrap">
+              <div class="item-name">
+                テキスト
+                <span class="not_required">任意</span>
+              </div>
+              <%= f.text_area :content, class:"posts-text", id:"post-info", placeholder:"場所の説明や情報（任意 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+            </div>
+          </section>
+          <section class="form-section">
+            <div class="form-section-wrap">
+              <div class="item-name">
+                カテゴリー
+                <span class="required">必須</span>
+              </div>
+              <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"post-category"}) %>
+            </div>
+          </section>
+          <section class="form-section">
+            <div class="form-section-wrap">
+              <div class="item-name">
+                公開範囲
+                <span class="required">必須</span>
+              </div>
+              <%= f.collection_select(:public_id, Public.all, :id, :name, {}, {class:"select-box", id:"post-public"}) %>
+            </div>
+          </section>
+        </div>
+        <div class="post-btn-contents">
+          <%= f.submit "投稿する" ,class:"post-btn" %>
+          <%=link_to '<< back', root_path, class:"back-btn" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

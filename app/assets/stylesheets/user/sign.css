@@ -12,6 +12,28 @@
   color: #3176D5;
 }
 
+form input,
+form textarea {                        /* Post.newも共有 */
+  width: 100%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 20px;
+  font-family: "游ゴシック", "YuGothic";
+}
+
+form input[type="submit"] {             /* Post.newも共有 */
+  background-color: #3176D7;
+  border-radius: 20px;
+  color: #fff;
+  border: 0;
+  font-size: 18px;
+}
+
+form input[type="submit"]:hover {        /* Post.newも共有 */
+  background-color: #84d3ef;
+}
+
 /*** 画像 ***/
 .sign-img {
   width: calc(100% - 480px);
@@ -48,28 +70,6 @@
 .field,.actions {
   padding: 0 30px;
   color: #3176D5;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  margin: 5px 0 15px;
-  padding: 10px;
-  border: 1px solid #D8D8D8;
-  border-radius: 20px;
-  font-family: "游ゴシック", "YuGothic";
-}
-
-form input[type="submit"] {
-  background-color: #3176D5;
-  border-radius: 20px;
-  color: #fff;
-  border: 0;
-  font-size: 18px;
-}
-
-form input[type="submit"]:hover {
-  background-color: #84d3ef;
 }
 
 /**** sessionログイン画面 ****/

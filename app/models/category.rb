@@ -11,7 +11,7 @@ class Category < ActiveHash::Base
     { id: 9, name: 'スポーツ' },
     { id: 10, name: 'ビーチ' },
     { id: 11, name: '人々' },
-    { id: 11, name: 'その他' },
+    { id: 12, name: 'その他' },
   ]
 
   include ActiveHash::Associations
