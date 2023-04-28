@@ -13,49 +13,63 @@
     </div>
     <ul class="post-home-pic">
       <div class="home-pic-caption">
-        <li><%= link_to image_tag "建造物3298587710_f03c60eb8b_o.jpeg", class:"home-pic-building" %></li>
+        <li><%= link_to image_tag("建造物3298587710_f03c60eb8b_o.jpeg", category_id: 2, class:"home-pic-building"), "/category/2" %></li>
         <p class="home-pic-title">建造物</p>
       </div>
+
       <div class="home-pic-caption">
-        <li><%= link_to image_tag "ホテルd77eaad4b33aefe9d8e0980f3aad4f12_t.jpeg", class:"category-picture" %></li>      
+        <li><%= link_to image_tag("ホテルd77eaad4b33aefe9d8e0980f3aad4f12_t.jpeg", category_id: 3, class:"category-picture"),  "/category/3" %></li>      
         <p class="home-pic-title">ホテル,旅館</p>
       </div>
+
       <div class="home-pic-caption">
-      <li><%= link_to image_tag "グルメadpDSC_1803-.jpeg", class:"category-picture" %></li>
-      
+      <li><%= link_to image_tag("グルメadpDSC_1803-.jpeg", category_id: 4, class:"category-picture"),  "/category/4" %></li>
         <p class="home-pic-title">グルメ,料理</p>
       </div>
+
       <div class="home-pic-caption">
-        <li><%= link_to image_tag "自然photo0000-2033.jpeg", class:"category-picture" %></li>
+        <li><%= link_to image_tag("自然photo0000-2033.jpeg", category_id: 5, class:"category-picture"),  "/category/5" %></li>
         <p class="home-pic-title">自然</p>
       </div>
+
       <div class="home-pic-caption">
-       <li><%= link_to image_tag "世界遺産4029580878_ea807804e5.jpeg", class:"category-picture" %></li>
+       <li><%= link_to image_tag("世界遺産4029580878_ea807804e5.jpeg",category_id: 6, class:"category-picture"),  "/category/6" %></li>
         <p class="home-pic-title">世界遺産</p>
       </div>
+
       <div class="home-pic-caption">
-        <li><%= link_to image_tag "ショップcac6ac2163e673609b90372bf628cb71_t.jpeg", class:"category-picture" %></li>  
+        <li><%= link_to image_tag("ショップcac6ac2163e673609b90372bf628cb71_t.jpeg", category_id: 7, class:"category-picture"),  "/category/7" %></li>  
         <p class="home-pic-title">ショップ</p>
       </div>
+
       <div class="home-pic-caption">
-        <li><%= link_to image_tag "雑貨089_2048-1024x683.jpeg", class:"category-picture" %></li>
+        <li><%= link_to image_tag("雑貨089_2048-1024x683.jpeg", category_id: 8, class:"category-picture"),  "/category/8" %></li>
         <p class="home-pic-title">アクセサリー,雑貨</p>
       </div>
+
       <div class="home-pic-caption">
-        <li><%= link_to image_tag "スポーツsoccer-player-action-on-the-stadium_1150-14606.avif", class:"category-picture" %></li>
+        <li><%= link_to image_tag("スポーツsoccer-player-action-on-the-stadium_1150-14606.avif", category_id: 9, class:"category-picture"),  "/category/9" %></li>
         <p class="home-pic-title">スポーツ</p>
       </div>
+
       <div class="home-pic-caption">
-        <li><%= link_to image_tag "ビーチpr00488.jpeg", class:"category-picture" %></li>
+        <li><%= link_to image_tag("ビーチpr00488.jpeg", category_id: 10, class:"category-picture"),  "/category/10" %></li>
         <p class="home-pic-title">ビーチ</p>
       </div>
+
       <div class="home-pic-caption">
-        <li><%= link_to image_tag "人々2019-10-05-17.28.25-1024x768.jpg", class:"category-picture" %></li>
+        <li><%= link_to image_tag("人々2019-10-05-17.28.25-1024x768.jpg", category_id: 11, class:"category-picture"),  "/category/11" %></li>
         <p class="home-pic-title">人々</p>
       </div>
+
       <div class="home-pic-caption">
-        <li><%= link_to image_tag "その他dscn0128.jpeg", class:"category-picture" %></li>
+        <li><%= link_to image_tag("その他dscn0128.jpeg", category_id: 12, class:"category-picture"),  "/category/12" %></li>
         <p class="home-pic-title">その他</p>
+      </div>
+      
+      <div class="home-pic-caption">
+        <li><%= link_to image_tag("allダウンロード.jpeg", class:"category-picture"), "/category/:id" %></li>
+        <p class="home-pic-title">ALL</p>
       </div>
     </ul>
   </section>
