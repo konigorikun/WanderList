@@ -1,4 +1,49 @@
 <%= render "shared/header" %>
 
+<%# 投稿一覧 %>
+<div class="post-contents-main">
+  <div class=public-lists>
+    <%= link_to "全て公開", '#', class:"public-list", data: {filter: "all"} %>
+    <%= link_to "友達のみ", '#', class:"public-list", data: {filter: "friends"} %>
+    <%= link_to "自分のみ", '#', class:"public-list", data: {filter: "me"} %>
+  </div>
+
+    <% if @posts.any? %>
+      <div class="subtitle">
+        <h2 class="category-name"><%= @posts.first.category.name %></h2>
+      </div>
+    <% end %>
+
+
+    <ul class='item-lists'>
+      <% @posts.each do |post| %>
+         <%= link_to post.user.nickname,'#', class:"img-user"%>
+        <li class='list'>
+          <% if post.image.attached? %>
+            <%= link_to image_tag(post.image, class:"category-images"), "" %>
+          <% elsif %>
+            <%= image_tag 'noimage.png', class:"category-images" %>
+          <% end %>
+          <div class="img-detail">
+            <p class="img-place"><%= post.place %></p>
+            <p class="img-content"><%= post.content %></p>
+          </div>
+          <div class="img-comment">
+            <p>コメント or chat</p>
+          </div>
+        <li>
+        <div class="good-answers">
+          <P class="good">いいねボタン</p>
+          <P class="favorite">お気に入りボタン</p>
+          
+        </div>
+      <% end %>
+    </ul>
+</div>
+
+  <%# /投稿一覧 %>
+  
+
+
 <%= render "shared/footer" %>
 
