@@ -57,24 +57,36 @@
 }
 
 .img-detail {
-  width: calc((100vw - 400px) /2);
+  width: 33vw;
   flex-direction: column;
   margin-left: 30px;
+  border: 2px solid #3176D5;
+  border-radius: 10px;
+  padding: 10px;
 }
 .img-place {
   margin-bottom: 20px;
+  overflow-y: scroll;
+  border-bottom: 2px solid #3176D5;
 }
 
 .img-content {
   word-wrap: break-word;
   word-break: break-all;
+  overflow-y: scroll;
+}
+
+.img-comments {
+  margin-left: 30px;
+  padding: 10px;
+  width: 33vw;
+  border: 2px solid #3176D5;
+  border-radius: 10px;
 }
 
 .img-comment {
-  margin-left: 30px;
-  width: 50vw;
+  border-bottom: 2px solid #3176D5;
 }
-
 .good-answers{
   display: flex;
   margin-left: 50px;
