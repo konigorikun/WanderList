@@ -52,12 +52,12 @@
 }
 
 .list img {
-  width: 400px;
+  width: 450px;
   height: 320px;
 }
 
 .img-detail {
-  width: 33vw;
+  width: calc(100vw - 540px);
   flex-direction: column;
   margin-left: 30px;
   border: 2px solid #3176D5;

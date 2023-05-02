@@ -20,16 +20,13 @@
          <%= link_to post.user.nickname,'#', class:"img-user"%>
         <li class='list'>
           <% if post.image.attached? %>
-            <%= link_to image_tag(post.image, class:"category-images"), "" %>
+            <%= link_to image_tag(post.image, class:"category-images"), post_path(post.id) %>
           <% elsif %>
             <%= image_tag 'noimage.png', class:"category-images" %>
           <% end %>
           <div class="img-detail">
             <p class="img-place"><%= post.place %></p>
             <p class="img-content"><%= post.content %></p>
-          </div>
-          <div class="img-comments">
-            <p class="img-comment">コメント or chat</p>
           </div>
         <li>
         <div class="good-answers">
