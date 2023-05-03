@@ -8,7 +8,7 @@
       <% if user_signed_in? && current_user.id == @post.user_id %> 
       <ul class="more_list">
         <li>
-          <%= link_to '編集', "", class:"more_list_edit", method: :get %>
+          <%= link_to '編集', edit_post_path(@post.id), class:"more_list_edit", method: :get %>
         </li>
         <li>
           <%= link_to '削除', "", class:"more_list_delete",method: :delete %>
