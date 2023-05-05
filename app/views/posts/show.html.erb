@@ -1,17 +1,21 @@
 <%= render "shared/header" %>
 
 <div class="contents_row">
-  <%#= link_to '<<一覧へ戻る', "", class:"post_back" %>
+  <%= link_to '<<一覧へ戻る', "", class:"post_back" %>
   <div class="content_post">
     <div class="more">
-      <span><%= image_tag @post.image %></span>
+      <% if @post.image.present? %>
+        <span><%= image_tag @post.image %></span>
+      <% else %>
+        <%= image_tag 'noimage.png' %>
+      <% end %>
       <% if user_signed_in? && current_user.id == @post.user_id %> 
       <ul class="more_list">
         <li>
           <%= link_to '編集', edit_post_path(@post.id), class:"more_list_edit", method: :get %>
         </li>
         <li>
-          <%= link_to '削除', "", class:"more_list_delete",method: :delete %>
+          <%= link_to '削除', post_path(@post.id), class:"more_list_delete", method: :delete %>
         </li>
       </ul>
       <% end %>

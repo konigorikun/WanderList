@@ -38,6 +38,13 @@ class PostsController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+    post = Post.find(params[:id])
+    category_id = post.category_id
+    post.destroy
+    redirect_to category_id ? category_image_path(category_id) : posts_path
+  end
   
   private
 

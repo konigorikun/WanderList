@@ -22,7 +22,7 @@
           <% if post.image.attached? %>
             <%= link_to image_tag(post.image, class:"category-images"), post_path(post.id) %>
           <% elsif %>
-            <%= image_tag 'noimage.png', class:"category-images" %>
+            <%= link_to image_tag('noimage.png', class:"category-images"), post_path(post.id)%>
           <% end %>
           <div class="img-detail">
             <p class="img-place"><%= post.place %></p>
