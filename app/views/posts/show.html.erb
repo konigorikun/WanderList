@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 
 <div class="contents_row">
-  <%= link_to '<<一覧へ戻る', "", class:"post_back" %>
+  <%= link_to '<<一覧へ戻る', 'javascript:history.back()', class:"post_back" %>
   <div class="content_post">
     <div class="more">
       <% if @post.image.present? %>

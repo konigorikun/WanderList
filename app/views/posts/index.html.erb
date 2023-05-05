@@ -8,7 +8,7 @@
     <%= link_to "自分のみ", '#', class:"public-list", data: {filter: "me"} %>
   </div>
 
-    <% if @posts.any? %>
+    <% if params[:id] && @posts.any? %>
       <div class="subtitle">
         <h2 class="category-name"><%= @posts.first.category.name %></h2>
       </div>
@@ -31,8 +31,7 @@
         <li>
         <div class="good-answers">
           <P class="good">いいねボタン</p>
-          <P class="favorite">お気に入りボタン</p>
-          
+          <P class="favorite">お気に入りボタン</p>         
         </div>
       <% end %>
     </ul>
