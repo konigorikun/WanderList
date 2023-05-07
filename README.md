@@ -74,12 +74,12 @@ https://docs.google.com/spreadsheets/d/1PKg7P3iw5zB7DHe419S0CmVVLzU4Q7V0prVxPrZ4
 
 ## comments テーブル
 
-| Column      | Type       | Options                        |
-| ----------- | ---------- | ------------------------------ |
-| content     | text       | null: false                    |
-| user        | references | null: false, foreign_key: true |
-| post        | references | null: false, foreign_key: true |
-| schedule    | references | null: false, foreign_key: true |
+| Column      | Type    | Options |
+| ----------- | ------- | ------- |
+| text        | text    |         |
+| user_id     | integer |         |
+| post_id     | integer |         |
+| schedule_id | integer |         |
 
 ### Association
 
