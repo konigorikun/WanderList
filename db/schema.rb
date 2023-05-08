@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 2023_05_08_024230) do
 
   create_table "schedules", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
+    t.string "region", null: false
     t.datetime "start_date", null: false
     t.datetime "end_date", null: false
     t.integer "budget"
