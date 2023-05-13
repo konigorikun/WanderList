@@ -1,0 +1,75 @@
+<p id="notice"><%= notice %></p>
+
+<div class="schedule_display">
+  <div class="sche_top_page">
+    <h1 class="sche_top">カレンダー</h1>
+  </div>
+
+  <div class="schedule_main">
+    <div class="col-md-4">
+      <div class="table">
+        <div class="sche-title">
+            <div class="sche_title_plan">タイトル日程</div>
+        </div>
+
+        
+        </tbody>
+      </div>
+
+      <%= form_with(model: @schedule, local: true) do |form| %>
+
+        <div class="sche_title_detail">
+          <div class="form-tag">タイトル</div>
+          <%= form.text_field :title %>
+        </div>
+
+         <div class="sche_budget">
+          <div class="form-tag">予算</div>
+          <%= form.text_field :budget %>
+        </div>
+
+        <div class="sche_region">
+          <div class="form-tag">地域</div>
+          <%= form.select :region, options_for_select([['北アメリカ', 'north-america'], ['南アメリカ', 'south-america'], ['ヨーロッパ', 'europe'], ['アフリカ', 'africa'], ['オセアニア', 'oceania'], ['東アジア', 'east-asia'], ['東南アジア', 'southeast-asia'], ['中央・中東アジア', 'central-middleeast-asia'], ['日本', 'japan']]) %>
+        </div>
+
+        <div class="shce_time">
+          <div class="form-tag">開始日</div>
+          <%= form.date_select :start_time %>
+        </div>
+
+        <div class="sche_time">
+          <div class="form-tag">終了日</div>
+          <%= form.date_select :end_time %>
+        </div>
+
+        <div class="sche_submit">
+          <%= form.submit %>
+        </div>
+      <% end %>
+
+      <div class="schedule_list">今後の予定一覧</div>
+      
+          <% @schedules.each do |sche| %>
+            <div class='sche_list_all' >
+              <%= link_to sche.title , "#", class: 'sche_list_title'%>
+              <%= sche.start_time.strftime("%m/%d") %> - <%= sche.end_time.strftime("%m/%d") %>
+            </div>
+          <% end %>
+        
+    </div>
+
+    <div class="col-md-8">
+      <%= month_calendar events: @schedules do | date, schedules | %>
+    
+        <%= date.day %>
+        <% schedules.each do |schedule| %>
+          <div class="schedule-option-<%= schedule.region.parameterize %>">
+            <%= link_to schedule.title, "#", class: 'sche_title_deco'%>
+          </div>
+        <% end %>
+     
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,90 @@
+.schedule_display {
+  width: 100vw;
+  height: 100vh;
+}
+
+.sche_top_page {
+  height: 10%;
+}
+
+/** LEFTSIDE **/
+
+.sche-title {
+  margin: 10px;
+}
+
+.sche_title_plan {
+  text-align: center;
+}
+
+.sche_submit {
+  margin: 10px 0;
+}
+
+.schedule_main {
+  display: flex;
+  height: 100vh;
+  justify-content: space-around;
+}
+
+.col-md-4 {
+  width: 20vw;
+  background-color: rgb(241, 241, 219);
+}
+
+.sche_list_all {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10px;
+}
+
+.sche_list_title {
+  flex-direction: column;
+}
+
+/**カレンダー**/
+
+.col-md-8 {
+  width: calc(100vw - 20vw);
+}
+
+.sche_title_deco {
+  color: black;
+  text-decoration: none;
+}
+
+.schedule-option-north-america {
+  background-color: #f0a4a4;
+}
+
+.schedule-option-south-america {
+  background-color: rgb(165, 165, 234);
+}
+
+.schedule-option-europe {
+  background-color: rgb(189, 240, 189);
+}
+
+.schedule-option-africa {
+  background-color: rgb(247, 247, 194);
+}
+
+.schedule-option-oceania {
+  background-color: rgb(235, 177, 235);
+}
+
+.schedule-option-east_asia {
+  background-color: rgb(226, 204, 163);
+}
+
+.schedule-option-southeast_asia {
+  background-color: rgb(233, 163, 186);
+}
+
+.schedule-option-central_middleeast_asia {
+  background-color: rgb(185, 249, 185);
+}
+
+.schedule-option-japan {
+  background-color: pink;
+}

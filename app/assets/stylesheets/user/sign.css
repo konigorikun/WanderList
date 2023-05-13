@@ -14,8 +14,8 @@
 
 form input,
 form textarea {                        /* Post.newも共有 */
-  width: 100%;
-  margin: 5px 0 15px;
+  width: 95%;
+  margin: 5px 5px 15px;
   padding: 10px;
   border: 1px solid #D8D8D8;
   border-radius: 20px;
