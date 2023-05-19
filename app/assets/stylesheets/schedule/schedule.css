@@ -73,18 +73,43 @@
   background-color: rgb(235, 177, 235);
 }
 
-.schedule-option-east_asia {
+.schedule-option-east-asia {
   background-color: rgb(226, 204, 163);
 }
 
-.schedule-option-southeast_asia {
+.schedule-option-southeast-asia {
   background-color: rgb(233, 163, 186);
 }
 
-.schedule-option-central_middleeast_asia {
+.schedule-option-central_middleeast-asia {
   background-color: rgb(185, 249, 185);
 }
 
 .schedule-option-japan {
   background-color: pink;
+}
+
+/** 今後の予定一覧 **/
+.schedule_list{
+  margin-left: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid black;
+
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.sche_plan_title, .btn04, .btn03 {
+  color: #1B43EF;
+  text-decoration: none;
 }

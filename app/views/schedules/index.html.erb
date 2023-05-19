@@ -1,19 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <div class="schedule_display">
-  <div class="sche_top_page">
-    <h1 class="sche_top">カレンダー</h1>
-  </div>
-
   <div class="schedule_main">
     <div class="col-md-4">
       <div class="table">
         <div class="sche-title">
             <div class="sche_title_plan">タイトル日程</div>
         </div>
-
-        
-        </tbody>
       </div>
 
       <%= form_with(model: @schedule, local: true) do |form| %>
@@ -47,29 +40,45 @@
           <%= form.submit %>
         </div>
       <% end %>
+   </div>
 
-      <div class="schedule_list">今後の予定一覧</div>
-      
-          <% @schedules.each do |sche| %>
-            <div class='sche_list_all' >
-              <%= link_to sche.title , "#", class: 'sche_list_title'%>
-              <%= sche.start_time.strftime("%m/%d") %> - <%= sche.end_time.strftime("%m/%d") %>
+      <div class="col-md-8">
+        <%= month_calendar events: @schedules do | date, schedules | %>
+          <%= date.day %>
+          <% schedules.each do |schedule| %>
+            <div class="schedule-option-<%= schedule.region.parameterize %>">
+              <%= link_to schedule.title, "#", class: 'sche_title_deco'%>
             </div>
           <% end %>
-        
-    </div>
-
-    <div class="col-md-8">
-      <%= month_calendar events: @schedules do | date, schedules | %>
-    
-        <%= date.day %>
-        <% schedules.each do |schedule| %>
-          <div class="schedule-option-<%= schedule.region.parameterize %>">
-            <%= link_to schedule.title, "#", class: 'sche_title_deco'%>
-          </div>
         <% end %>
-     
-      <% end %>
-    </div>
-  </div>
+        <br>
+
+        <table class="memo table table-bordered">
+          <div class="schedule_list">今後の予定一覧</div>
+			    <thead>
+            <tr>
+              <th>タイトル</th>
+              <th>予算</th>
+              <th>地域</th>
+              <th>開始日</th>
+              <th>終了日</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+			    <% @schedules.each do |plan| %>
+            <tbody>
+              <tr>
+                <td><%= link_to plan.title, '#' ,class:'sche_plan_title'%></td>
+                <td><%= plan.budget%></td>
+                <td><%= plan.region%></td>
+                <td><%= plan.start_time.strftime("%Y-%m-%d")%></td>
+                <td><%= plan.end_time.strftime("%Y-%m-%d")%></td>
+                <td><%=link_to "編集" , '#',:class=>"btn04"  %></td>
+                <td><%=link_to "削除", '#' , method: :delete , data: {confirm:"削除しますか"} ,:class=>"btn03"%></td>
+              </tr>
+            </tbody>
+			    <% end %>
+  		  </table>
+      </div>
 </div>
