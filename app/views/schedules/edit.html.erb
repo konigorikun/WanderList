@@ -1,0 +1,31 @@
+ <%= form_with(model: @schedule, local: true) do |form| %>
+
+        <div class="sche_title_detail">
+          <div class="form-tag">タイトル</div>
+          <%= form.text_field :title %>
+        </div>
+
+         <div class="sche_budget">
+          <div class="form-tag">予算</div>
+          <%= form.text_field :budget %>
+        </div>
+
+        <div class="sche_region">
+          <div class="form-tag">地域</div>
+          <%= form.select :region, options_for_select([['北アメリカ', 'north-america'], ['南アメリカ', 'south-america'], ['ヨーロッパ', 'europe'], ['アフリカ', 'africa'], ['オセアニア', 'oceania'], ['東アジア', 'east-asia'], ['東南アジア', 'southeast-asia'], ['中央・中東アジア', 'central-middleeast-asia'], ['日本', 'japan']]) %>
+        </div>
+
+        <div class="shce_time">
+          <div class="form-tag">開始日</div>
+          <%= form.date_select :start_time %>
+        </div>
+
+        <div class="sche_time">
+          <div class="form-tag">終了日</div>
+          <%= form.date_select :end_time %>
+        </div>
+
+        <div class="sche_submit">
+          <%= form.submit %>
+        </div>
+      <% end %>
