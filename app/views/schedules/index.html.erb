@@ -20,7 +20,7 @@
 
          <div class="sche_budget">
           <div class="form-tag">予算</div>
-          <%= form.text_field :budget %>
+          <%= form.text_field :budget %>円
         </div>
 
         <div class="sche_region">
@@ -55,12 +55,12 @@
         <% end %>
         <br>
 
-        <table class="memo table table-bordered">
+        <table class="table-bordered">
           <div class="schedule_list">今後の予定一覧</div>
 			    <thead>
             <tr>
               <th>タイトル</th>
-              <th>予算</th>
+              <th>予算（円）</th>
               <th>地域</th>
               <th>開始日</th>
               <th>終了日</th>
@@ -68,21 +68,23 @@
               <th></th>
             </tr>
           </thead>
-			    <% @schedules.each do |plan| %>
-            <tbody>
-              <tr>
-                <td><%= link_to plan.title, '#' ,class:'sche_plan_title'%></td>
-                <td><%= plan.budget%></td>
-                <td><%= plan.region%></td>
-                <td><%= plan.start_time.strftime("%Y-%m-%d")%></td>
-                <td><%= plan.end_time.strftime("%Y-%m-%d")%></td>
-                <td><%=link_to "編集" , '#',:class=>"btn04"  %></td>
-                <td><%=link_to "削除", '#' , method: :delete , data: {confirm:"削除しますか"} ,:class=>"btn03"%></td>
-              </tr>
-            </tbody>
-			    <% end %>
+          <div class="sche-plan">
+            <% @schedules.each do |plan| %>
+              <tbody>
+                <tr>
+                  <td><%= link_to plan.title, '#' ,class:'sche_plan_title'%></td>
+                  <td><%= plan.budget.to_s.gsub(/(\d)(?=(\d{3})+(?!\d))/, "\\1,")%></td>
+                  <td><%= plan.region%></td>
+                  <td><%= plan.start_time.strftime("%Y-%m-%d")%></td>
+                  <td><%= plan.end_time.strftime("%Y-%m-%d")%></td>
+                  <td><%=link_to "編集" , '#',:class=>"btn04"  %></td>
+                  <td><%=link_to "削除", '#' , method: :delete , data: {confirm:"削除しますか"} ,:class=>"btn03"%></td>
+                </tr>
+              </tbody>
+            <% end %>
+          </div>
   		  </table>
       </div>
 </div>
-
+</div>
 <%= render "shared/footer" %>
