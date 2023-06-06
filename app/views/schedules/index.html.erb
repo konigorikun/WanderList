@@ -20,7 +20,7 @@
 
          <div class="sche_budget">
           <div class="form-tag">予算</div>
-          <%= form.text_field :budget %>円
+          <%= form.text_field :budget, class:"sche_budget_sp"%>円
         </div>
 
         <div class="sche_region">
@@ -77,7 +77,7 @@
                   <td><%= plan.region%></td>
                   <td><%= plan.start_time.strftime("%Y-%m-%d")%></td>
                   <td><%= plan.end_time.strftime("%Y-%m-%d")%></td>
-                  <td><%=link_to "編集" , '#',:class=>"btn04"  %></td>
+                  <td><%=link_to "編集" , edit_schedule_path(plan.id),:class=>"btn04"  %></td>
                   <td><%=link_to "削除", '#' , method: :delete , data: {confirm:"削除しますか"} ,:class=>"btn03"%></td>
                 </tr>
               </tbody>
